@@ -1,0 +1,29 @@
+.wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f2;
+    border-radius: 50%;
+    justify-content: center;
+
+    &:hover {
+        background-color: #1618231a;
+    }
+}
+
+.icon {
+    margin: 0 auto;
+    font-size: 2.4rem;
+}
+
+.number {
+    display: block;
+    margin: 8px auto;
+    width: 48px;
+    text-align: center;
+    color: #161823bf;
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 700;
+}

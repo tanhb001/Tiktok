@@ -1,0 +1,50 @@
+.wrapper {
+    position: relative;
+}
+
+.label {
+    font-size: 1.4rem;
+    padding: 8px 0;
+    font-weight: 600;
+    color: #161823bf;
+}
+
+.discover-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 0;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 100%;
+    height: 24px;
+    margin-bottom: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(22, 24, 35, 0.2);
+    border-radius: 12px;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #1618230f;
+    }
+
+    .icon {
+        height: 16px;
+        line-height: 18px;
+    }
+
+    .title {
+        padding-left: 6px;
+        color: #161823bf;
+        font-size: 1.4rem;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}

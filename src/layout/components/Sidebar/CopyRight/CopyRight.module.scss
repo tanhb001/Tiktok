@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    position: relative;
+}
+
+.item {
+    margin-bottom: 8px;
+
+    a {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 17px;
+        display: inline-block;
+        margin-right: 6px;
+        margin-top: 5px;
+        color: #16182380;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    span {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 17px;
+        margin-right: 6px;
+        margin-top: 5px;
+        color: #16182380;
+    }
+}

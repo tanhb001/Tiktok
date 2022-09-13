@@ -1,0 +1,171 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 692px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e3e3e4;
+    position: relative;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+}
+
+.avatar:hover ~ .name {
+    text-decoration: underline;
+}
+
+.right-content {
+    margin-left: 12px;
+    width: 624px;
+    position: relative;
+}
+
+.content-items {
+    width: 510px;
+}
+
+.info {
+    width: 100%;
+    line-height: 29px;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #161823;
+    margin-right: 4px;
+    line-height: 25px;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.nickname {
+    font-size: 1.4rem;
+    color: #161823;
+    font-weight: 400;
+}
+
+.hashtag-wrapper {
+    width: 100%;
+}
+
+.hashtag {
+    display: inline-block;
+    font-weight: 600;
+    color: #161823;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 4px;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.music {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #161823;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    margin: 4px 0 12px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    span {
+        margin-left: 4px;
+    }
+}
+
+.btn-wrapper {
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+
+.video-wrapper {
+    border-radius: 8px;
+    width: 290px;
+    height: 516px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        .play,
+        .volum {
+            display: block;
+        }
+
+        .report {
+            display: inline-flex;
+        }
+    }
+}
+
+.play {
+    display: none;
+    position: absolute;
+    left: 12px;
+    bottom: 26px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+
+    .play-icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .play-icon {
+            font-size: 2rem;
+            color: #fff;
+        }
+    }
+}
+
+.volum {
+    display: none;
+    position: absolute;
+    right: 12px;
+    bottom: 26px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+.report {
+    display: none;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    padding: 8px;
+
+    .report-icon {
+        font-size: 1.2rem;
+    }
+
+    span {
+        margin-left: 4px;
+    }
+}
+
+.video-reaction {
+    position: absolute;
+    bottom: 8px;
+    left: 380px;
+}
