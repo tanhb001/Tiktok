@@ -4,7 +4,7 @@ import { MuteIcon, MusicIcon, VolumIcon, PauseIcon } from '~/components/Icons';
 import Button from '~/components/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDots, faFlag, faHeart, faPlay, faShare } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import VideoItem from '~/components/VideoItem';
 import { Waypoint } from 'react-waypoint';
 import ReactionIcon from '../ReactionIcon';
@@ -14,6 +14,10 @@ const cx = classNames.bind(styles);
 function Content({ name, nickname, videoUrl, avatar }) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [vol, setVol] = useState(1);
+
+    useEffect(() => {
+
+    }, [isPlaying])
 
     const playBtn = () => {
         setIsPlaying((current) => !current);

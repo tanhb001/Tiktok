@@ -5,7 +5,7 @@ import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import MenuItems from './MenuItems';
 import Header from './Header';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -14,6 +14,10 @@ const defaultFn = () => {};
 function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
+
+    useEffect(() => {
+        setHistory([{ data: items }])
+    }, [items])
 
     const renderItems = () => {
         return current.data.map((item, index) => {
@@ -27,6 +31,10 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                             setHistory((prev) => [...prev, item.children]);
                         } else {
                             onChange(item);
+                        }
+
+                        if(item.onClickLogout) {
+                            item.onClickLogout()
                         }
                     }}
                 />
