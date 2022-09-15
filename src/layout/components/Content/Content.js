@@ -13,7 +13,8 @@ const cx = classNames.bind(styles);
 
 function Content({ name, nickname, videoUrl, avatar }) {
     const [isPlaying, setIsPlaying] = useState(false);
-    const [vol, setVol] = useState(0);
+    const [vol, setVol] = useState(1);
+    const [muted,setMuted] = useState(true)
 
     useEffect((
         
@@ -35,7 +36,7 @@ function Content({ name, nickname, videoUrl, avatar }) {
 
     const playOnScroll = () => {
         setIsPlaying(true);
-        setVol(1)
+        setMuted(false)
     };
 
     const PauseOnScroll = () => {
@@ -90,7 +91,7 @@ function Content({ name, nickname, videoUrl, avatar }) {
                                 width="290px"
                                 height="516px"
                                 url={videoUrl}
-                                muted
+                                muted={muted}
                             />
                         </div>
 
