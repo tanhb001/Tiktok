@@ -13,9 +13,11 @@ const cx = classNames.bind(styles);
 
 function Content({ name, nickname, videoUrl, avatar }) {
     const [isPlaying, setIsPlaying] = useState(false);
-    const [vol, setVol] = useState(1);
+    const [vol, setVol] = useState(0);
 
-    useEffect(() => {
+    useEffect((
+        
+    ) => {
 
     }, [isPlaying])
 
@@ -33,6 +35,7 @@ function Content({ name, nickname, videoUrl, avatar }) {
 
     const playOnScroll = () => {
         setIsPlaying(true);
+        setVol(1)
     };
 
     const PauseOnScroll = () => {
