@@ -90,6 +90,7 @@ function Content({ name, nickname, videoUrl, avatar }) {
                                 width="290px"
                                 height="516px"
                                 url={videoUrl}
+                                muted
                             />
                         </div>
 
