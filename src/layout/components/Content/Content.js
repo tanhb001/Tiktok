@@ -12,9 +12,9 @@ import ReactionIcon from '../ReactionIcon';
 const cx = classNames.bind(styles);
 
 function Content({ name, nickname, videoUrl, avatar }) {
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [vol, setVol] = useState(1);
     const [muted,setMuted] = useState(true)
-    console.log(muted)
 
     useEffect((
         
@@ -28,7 +28,11 @@ function Content({ name, nickname, videoUrl, avatar }) {
     };
 
     const volumBtn = () => {
-        setMuted((current) => !current)
+        if (vol === 1) {
+            setVol(0);
+        } else {
+            setVol(1);
+        }
     };
 
     const playOnScroll = () => {
@@ -83,6 +87,7 @@ function Content({ name, nickname, videoUrl, avatar }) {
                         <div onClick={playBtn}>
                             <VideoItem
                                 loop
+                                volume={vol}
                                 playing={isPlaying}
                                 width="290px"
                                 height="516px"
@@ -101,7 +106,7 @@ function Content({ name, nickname, videoUrl, avatar }) {
                             )}
                         </div>
                         <div className={cx('volum')} onClick={volumBtn}>
-                            {muted ? <MuteIcon />: <VolumIcon /> }
+                            {vol === 1 ? <VolumIcon /> : <MuteIcon />}
                         </div>
                         <div className={cx('report')}>
                             <FontAwesomeIcon icon={faFlag} className={cx('report-icon')} />
