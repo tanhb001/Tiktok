@@ -20,6 +20,7 @@ function Content({ name, nickname, videoUrl, avatar }) {
         
     ) => {
 
+
     }, [isPlaying])
 
     const playBtn = () => {
